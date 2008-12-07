@@ -1,6 +1,6 @@
-class CreateGems < ActiveRecord::Migration
+class CreateGemms < ActiveRecord::Migration
   def self.up
-    create_table :gems do |t|
+    create_table :gemms do |t|
       t.string :name
       t.string :version
 
@@ -9,6 +9,6 @@ class CreateGems < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :gems
+    drop_table :gemms
   end
 end

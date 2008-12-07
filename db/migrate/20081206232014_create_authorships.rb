@@ -2,7 +2,7 @@ class CreateAuthorships < ActiveRecord::Migration
   def self.up
     create_table :authorships do |t|
       t.integer :author_id
-      t.integer :gem_id
+      t.integer :gemm_id
 
       t.timestamps
     end

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20081206232014) do
 
   create_table "authorships", :force => true do |t|
     t.integer  "author_id"
-    t.integer  "gem_id"
+    t.integer  "gemm_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20081206232014) do
     t.datetime "updated_at"
   end
 
-  create_table "gems", :force => true do |t|
+  create_table "gemms", :force => true do |t|
     t.string   "name"
     t.string   "version"
     t.datetime "created_at"

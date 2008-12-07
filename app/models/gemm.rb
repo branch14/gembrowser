@@ -1,4 +1,4 @@
-class Gem < ActiveRecord::Base
+class Gemm < ActiveRecord::Base
   has_many :dependencies_as_depender, :foreign_key => "depender_id", :class_name => "Dependency"
   has_many :dependencies_as_dependee, :foreign_key => "dependee_id", :class_name => "Dependency"
   
