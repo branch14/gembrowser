@@ -1,0 +1,40 @@
+  [4;36;1mSQL (0.000214)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000086)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.003187)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002468)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000445)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000158)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGems (20081206231430)
+  [4;35;1mSQL (0.000089)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002870)[0m   [0;1mCREATE TABLE "gems" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL, "version" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002853)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206231430')[0m
+Migrating to CreateAuthors (20081206231518)
+  [4;36;1mSQL (0.000474)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002675)[0m   [0mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002569)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206231518')[0m
+Migrating to CreateDependencies (20081206231824)
+  [4;35;1mSQL (0.000523)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002891)[0m   [0;1mCREATE TABLE "dependencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "depender_id" integer DEFAULT NULL NULL, "dependee_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002651)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206231824')[0m
+Migrating to CreateAuthorships (20081206232014)
+  [4;36;1mSQL (0.000560)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003130)[0m   [0mCREATE TABLE "authorships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author_id" integer DEFAULT NULL NULL, "gem_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002257)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206232014')[0m
+  [4;35;1mSQL (0.000435)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000099)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list("authorships")[0m
+  [4;35;1mSQL (0.000061)[0m   [0mPRAGMA index_list("dependencies")[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mPRAGMA index_list("gems")[0m
