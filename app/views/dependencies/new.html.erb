@@ -1,0 +1,20 @@
+<h1>New dependency</h1>
+
+<% form_for(@dependency) do |f| %>
+  <%= f.error_messages %>
+
+      <p>
+      <%= f.label :depender_id %><br />
+      <%= f.text_field :depender_id %>
+    </p>
+      <p>
+      <%= f.label :dependee_id %><br />
+      <%= f.text_field :dependee_id %>
+    </p>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', dependencies_path %>

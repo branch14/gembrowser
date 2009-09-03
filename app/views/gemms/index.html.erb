@@ -1,0 +1,22 @@
+<h1>Listing gemms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Version</th>
+  </tr>
+
+<% @gemms.each do |gemm| %>
+  <tr>
+    <td><%=h gemm.name %></td>
+    <td><%=h gemm.version %></td>
+    <td><%= link_to 'Show', gemm %></td>
+    <td><%= link_to 'Edit', edit_gemm_path(gemm) %></td>
+    <td><%= link_to 'Destroy', gemm, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New gemm', new_gemm_path %>
